@@ -1,0 +1,54 @@
+<DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./css/normalize.css">
+            <link rel="stylesheet" href="./css/style.css">
+            <link rel="icon" type="image/png" sizes="16x16" href="../doc/picture/logo/open-source.png">
+            <script src="./js/jquery-3.4.1.min.js"></script>
+            <script src="./js/main.js"></script>
+            <title>Question 1</title>
+            
+        </head>
+        <body>
+            <header id="main_header">
+                <a href="./index.html"><img src="../doc/picture/logo/logo.png" alt="logo page" id="logo_img"></a>
+                <h1>The True False</h1>
+                <nav id="main_nav">
+                    <h1 class="accessibility">Menu Principal</h1>
+                    <p class="accessibility"><a href="#pageContent" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+                    <ul>
+                        <li><a href="./index.html" title="Vers accueil">accueil</a></li>
+                        <li><a href="./about.html" title="Vers à propos">a propos</a></li>
+                    </ul> 
+                </nav>
+                <button id="menu_toggle"><img src="../doc/picture/various/logo_menu.svg" alt="Ouvrir / Fermer le menu" /></button>
+            </header>
+            <section id="main_page_content" class="text two_cols">
+                <main id="left_col">
+                    <form name="qcm1">
+                        <figure>
+                            <img src="../doc/picture/various/page_2/naine_blanche.jpg" alt="Image illustrant la question">
+                            <figcaption>Bételgeuse</figcaption>
+                        </figure>
+    
+                        <h1>Une jeune étoile est aussi appelée une « naine blanche ».</h1>
+                        <div id="reponses">
+                            <button type="button" id="true" class ="reponse" onclick="vrai()">Vrai</button>
+                            <button type="button" id="false" class ="reponse" onclick="faux()">Faux</button>
+                        </div>
+                    </form>
+                </main>
+                <aside id="right_col">
+                    <section id="music_player">
+                        <audio src="../doc/music/videoplayback.webm" type="audio/webm" id="titre" autoplay loop controls muted></audio>
+                    </section>
+                    <a href="../doc/music_galerie.html">Galeries Music</a>
+                </aside>
+            </section>
+            <footer id="main_footer">
+                <p>&copy; Copyright Tao Chupin - 2022</p>
+            </footer>
+        </body>
+    </html>

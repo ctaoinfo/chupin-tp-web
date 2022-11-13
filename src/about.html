@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="../doc/picture/logo/open-source.png">
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script src="./js/main.js"></script>
+        <title>Question 1</title>
+        
+    </head>
+    <body>
+        <header id="main_header">
+            <a href="./page_1.html"><img src="../doc/picture/logo/logo.png" alt="logo page" id="logo_img"></a>
+            <h1>The True False</h1>
+            <nav id="main_nav">
+                <h1 class="accessibility">Menu Principal</h1>
+                <p class="accessibility"><a href="#pageContent" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+                <ul>
+                    <li><a href="./index.html" title="Vers accueil">accueil</a></li>
+                    <li><a href="./about.html" title="Vers à propos">a propos</a></li>
+                </ul> 
+            </nav>
+            <button id="menu_toggle"><img src="/doc/picture/various/logo_menu.svg" alt="Ouvrir / Fermer le menu" /></button>
+        </header>
+        <section id="main_page_content" class="text two_cols">
+            <main id="left_col">
+                <form name="qcm1">
+                    <h1>A Propos</h1>
+                    <p id="p_about">Se site correspond à un tp réaliser dans le cadre d'un cours, dont les consignes se trouve dans le pdf suivant :<a href="../doc/TP-Web.pdf">pdf en question</a>.<br>Créer par Tao Chupin en classe de bachelor 1 informatique dans le campus Ynov.</p>
+                </form>
+            </main>
+            <aside id="right_col">
+                <section id="music_player">
+                    <audio src="../doc/music/videoplayback.webm" type="audio/webm" id="titre" autoplay loop controls muted></audio>
+                </section>
+                <a href="../doc/music_galerie.html">Galeries Music</a>
+            </aside>
+        </section>
+        <footer id="main_footer">
+            <p>&copy; Copyright Tao Chupin - 2022</p>
+        </footer>
+    </body>
+</html>

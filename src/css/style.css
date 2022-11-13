@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Prompt:wght@300&family=Raleway:wght@300&family=Sono&display=swap');
+
+:root {
+    --black: #181818;
+    --red: #a82d31;
+    --purple: rgba(59, 9, 61, 0.9); 
+    --green: #50be6d;
+    --white: #FFFFFF;
+    --tWhite: rgba(255,255,255,0.5);
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------- Global --------------------------------------------- */
+* {
+    box-sizing: inherit;
+}
+
+/* --------------------------------------------- Toute la page ---------------------------------------------*/
+body{
+	font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+	color: black;
+	font-size: 1rem;
+}
+
+/* --------------------------------------------- Toutes les images --------------------------------------------- */
+
+img {
+
+    max-width: 100%;
+    max-height: 1080px;
+}
+
+/* --------------------------------------------- Pour les prompteur ou script de lecture de la page --------------------------------------------- */
+
+.accessibility {
+    position: absolute;
+    left: -15000px;
+}
+
+/* --------------------------------------------- Bandeau header et footer --------------------------------------------- */
+
+#main_header, #main_footer{
+    background-color: none;
+}
+
+/* --------------------------------------------- Bandeau header --------------------------------------------- */
+
+#main_header {
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+}
+
+
+
+/* --------------------------------------------- Logo Accueil --------------------------------------------- */
+
+/* ----------------------- Lien page accueil sur logo ----------------------- */
+
+#main_header > a {
+    cursor:  default;
+}
+
+/* ----------------------- Logo de la page ----------------------- */
+
+#logo_img {
+    background-color: var(--tWhite);
+    border-radius: 30%;
+    width: 80px;
+    padding: 5px;
+    z-index: 1000;
+    position: relative;
+}
+
+/* --------------------------------------------- Titre Site --------------------------------------------- */
+#main_header > h1 {
+    color: var(--white);
+    font-family: Karla, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 0;
+}
+
+/* --------------------------------------------- Barre de navigation --------------------------------------------- */
+
+/*----------------------- Toute la barre de vaigation ----------------------- */
+
+#main_nav {
+	font-family: Karla, Verdana, Geneva, Tahoma, sans-serif;
+	background-color: var(--purple);
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+/* ----------------------- Liste barre navigation ----------------------- */
+
+#main_nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------- Lien vers les pages en questions de la barre de navigation ----------------------- */
+
+#main_nav a{
+	font-family: Prompt, Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding-left: 90px;
+}
+
+/* ----------------------- Quand les liens de la barre de navigation sont survoller ----------------------- */
+
+#main_nav a:hover {
+	color: #5817ad;
+
+}
+
+#menu_toggle {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+#main_page_content {
+    background: url(/doc/picture/back_ground/main_background.jpg) center center / cover no-repeat fixed;
+    padding: 80px 30px;
+    min-height: 100vh;
+}
+
+#main_page_content #p_about {
+    font-family: Sono, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+#main_page_content h1{
+    font-size: 1.8em;
+	font-family: Sono, Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--red);
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+#main_page_content.text > main#left_col > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main_page_content.text > main#left_col > form > figure {
+    align-items: center;
+}
+
+#main_page_content.text img{
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+/* --------------------------------------------- Bouton --------------------------------------------- */
+
+button[type="button"].reponse {
+    box-shadow: 0px 0px 0px 2px #6d0a81;
+	background: linear-gradient(to bottom, #1e023d 5%, #8c11bd 100%);
+	background-color:#5817ad;
+	border-radius:20px;
+	border:1px solid #74964e;
+	cursor: pointer;
+	color:#ffffff;
+	font-family: Sono, Verdana, Geneva, Tahoma, sans-serif;
+	font-size:1em;
+	padding:12px 22px;
+    text-decoration:none;
+    margin: 0px 10px;
+	text-shadow:0px 1px 0px #660742;
+    transition: all 0,5s;
+}
+
+button[type="button"].reponse:hover {
+    background:linear-gradient(to bottom, #f099f0 5%, #a00d80 100%);
+	background-color:#ca25bc;
+}
+
+button[type="button"].reponse:checked {
+    background:linear-gradient(to bottom, #f099f0 5%, #a00d80 100%);
+	background-color:#ca25bc;
+}
+
+/* --------------------------------------------- Texte --------------------------------------------- */
+#main_page_content.text h2{
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: .1em;
+    margin-top: 50px;
+}
+
+#main_page_content.text .align_left {
+    float: left;
+}
+
+#main_page_content.text .align_right {
+    float: right;
+}
+
+#main_page_content.text dl {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 20px;
+    color: var(--black);
+}
+
+#main_page_content.text dl dt {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#main_page_content.text dl dd {
+    margin: 10px 0 10px 20px;
+}
+
+
+#main_page_content.galleries ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-gap: 20px;
+ }
+
+#main_page_content.galleries ul li{
+    background-color: var(--white);
+    padding: 10px;
+}
+
+#main_page_content.galleries ul li a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+#main_page_content.galleries ul li:hover{
+    background-color: var(--purple);
+}
+
+#main_page_content.galleries ul audio:hover {
+    transform: scale(1.6);
+}
+
+#main_page_content.two_cols{
+    display: grid;
+    grid-gap: 20px;
+}
+
+/**/
+
+
+audio:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(2px 3px 3px rgb(160, 38, 190));
+}
+
+#main_page_content #right_col{
+    padding-top: 20px;
+}
+#main_page_content #right_col section{
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 20px;
+}
+
+#main_page_content #right_col a{
+    display: none;
+}
+
+/**/
+
+main {
+    background-color: var(--tWhite);
+    padding: 20px;
+    margin: 20px
+}
+
+
+#main_footer{
+    height: 40px;
+    width: 100%;
+    font-size: .5em;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+
+@media screen and (min-width: 768px){
+    #menu_toggle {
+        display: none;
+    }
+    #main_header {
+        grid-template-columns: 80px 250px 1fr;
+    }
+    #main_nav{
+        position: static;
+        background-color: transparent;
+        display: block !important;
+    }
+    #main_nav ul{
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 40px;
+        align-items: center;
+    }
+    #main_nav a{
+        font-size: 1,2em;
+        padding: 0 15px;
+    }
+    #main_page_content.galleries ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #main_header {
+        grid-template-columns: 80px repeat(2, 1fr);
+    }
+
+    #main_header > h1 {
+        font-size: 1.3em;
+    }
+
+    #main_page_content.contact form{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    #main_page_content.contact form button {
+        grid-column: span 2;
+    }
+
+    #main_page_content.galleries ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #main_page_content.two_cols{
+        grid-template-columns: 2fr 1fr;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    #main_page_content.galleries ul{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #main_page_content.two_cols{
+        grid-template-columns: 3fr 1fr;
+    }
+
+}
+
